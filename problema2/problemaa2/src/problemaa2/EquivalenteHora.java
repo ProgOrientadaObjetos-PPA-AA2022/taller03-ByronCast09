@@ -12,22 +12,22 @@ public class EquivalenteHora{
     private int horas;
     private int minutos;
     private int segundos;
-    private int dias;
+    private double dias;
  
     public void establecerhoras(int c){
         horas = c;
     }
     
-    public void establecerminutos(int c){
-        minutos = c;
+    public void calcularrminutos(){
+        minutos = horas * 60;
     }
     
-    public void establecersegundos(int c){
-        segundos = c;
+    public void calcularsegundos(){
+        segundos = horas * 3600;
     }
     
-    public void establecerdias(int c){
-        dias = c;
+    public void calculardias(){
+        dias = horas * 0.0417;
     }
     
     public int obtenerhoras(){
@@ -41,7 +41,7 @@ public class EquivalenteHora{
         return segundos;
     }
     
-    public int obtenererdias(){
+    public double obtenererdias(){
         return dias;
     }
 }
